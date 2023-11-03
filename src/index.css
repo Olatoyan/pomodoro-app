@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 62.5%;
+}
+
+.timer-text {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.circle {
+  stroke-width: 10;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s linear, stroke 0.8s linear;
+}
+
+/* CircularTimer.css */
+/* .circular-timer { */
+/* text-align: center;
+}
+
+.circle-bg {
+  fill: transparent;
+  stroke: #eee; /* Background color */
+/* stroke-width: 3; */
+/* } */
+
+/* .circle {
+  fill: transparent;
+  stroke: #00bfff;
+  stroke-width: 3;
+  stroke-dasharray: 314;
+  transition: stroke-dashoffset 1s linear;
+} */
