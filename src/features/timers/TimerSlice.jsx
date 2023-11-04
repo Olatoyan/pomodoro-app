@@ -16,7 +16,9 @@ const timerSlice = createSlice({
   initialState,
   reducers: {
     increasePomodoro(state) {
-      state.pomodoro += 60;
+      if (state.pomodoro < 60 * seconds) {
+        state.pomodoro += 60;
+      }
     },
     decreasePomodoro(state) {
       if (state.pomodoro > 60) {
@@ -24,7 +26,9 @@ const timerSlice = createSlice({
       }
     },
     increaseShortBreak(state) {
-      state.shortBreak += 60;
+      if (state.shortBreak < 25 * seconds) {
+        state.shortBreak += 60;
+      }
     },
     decreaseShortBreak(state) {
       if (state.shortBreak > 60) {
@@ -32,7 +36,9 @@ const timerSlice = createSlice({
       }
     },
     increaseLongBreak(state) {
-      state.longBreak += 60;
+      if (state.longBreak < 45 * seconds) {
+        state.longBreak += 60;
+      }
     },
     decreaseLongBreak(state) {
       if (state.longBreak > 60) {
