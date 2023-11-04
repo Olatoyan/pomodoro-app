@@ -34,10 +34,10 @@ function HomepageSelectOption() {
         {timerOptions.map((option) => (
           <p
             key={option.name}
-            className={`text-[1.4rem] mobile:text-[1.2rem]  font-bold py-6 px-10 mobile:px-8 rounded-[2.65rem] cursor-pointer transition-all duration-300 ${
+            className={`text-[1.4rem] mobile:text-[1.2rem]  font-bold py-6 px-10 mobile:px-8 rounded-[2.65rem] cursor-pointer transition-all duration-300  ${
               selectedOption === option.name
                 ? ` text-dark-blue`
-                : "text-pale-blue"
+                : "text-pale-blue text-opacity-40 hover:text-opacity-100"
             }`}
             style={{
               backgroundColor:
